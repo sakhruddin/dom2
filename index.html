@@ -1,0 +1,52 @@
+
+<html>
+  <head>
+    <title>интукод</title>
+  </head>
+  <body>
+    <div id="main">
+        <ul id="list">
+            <li>html</li>
+            <li>css</li>
+        </ul>
+    </div>
+      <div id="copyright">(c) INTOCODE</div>
+      <script>
+        const render = () => {
+          const h1 = document.createElement('h1')
+          h1.textContent = 'работа с DOM'
+          document.body.prepend(h1)
+        }
+        render()
+        const renderRef = () => {
+          const a = document.createElement('a')
+          const div = document.getElementById('main')
+          a.href = 'https://ru.wikipedia.org/wiki/Document_Object_Model'
+          div.append(a)
+        }
+        renderRef()
+
+        const renderColor = (color) => {
+          document.body.style.backgroundColor = color
+        }
+        renderColor('green')
+
+        const renderText = (text) => {
+          const ul = document.getElementById('list')
+          const li = document.createElement('li')
+          li.textContent = text
+          ul.append(li)
+        }
+        renderText('новый текст')
+
+
+        const renderRemove = () => {
+          const div = document.getElementById('copyright')
+          div.remove()
+        }
+        renderRemove()
+
+      //   Функция которая принимает один параметр - текст - и добавляет в конец списка #list новый элемент li c текстом переданным в функцию.
+      // </script>
+  </body>
+  </html
